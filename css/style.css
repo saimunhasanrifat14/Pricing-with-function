@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.title{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    position: relative;
+    color: rgb(102, 102, 102) !important;
+}
+.title::after{
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.242);
+}
+.pricing{
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    margin-top: 100px;
+    box-shadow: rgba(149, 157, 165, 0.263) 0px 8px 24px;
+    border-radius: 20px;
+    /* border: 3px solid black; */
+}
+.pricing h1{
+    font-size: 20px;
+    font-weight: 500;
+}
+.pricing span{
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
