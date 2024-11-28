@@ -8,6 +8,11 @@
 
 const takeAcualPrice = +prompt('Enter your buing price ');
 
+// If the user input a wrong number than show a alert
+if(isNaN(+takeAcualPrice)){
+    alert("You are typed a wrong input, reload the page and try again.")
+}
+
 // vatAdder Function implement
 const vatAdder = (actualPrice = 0, vat = 10)=> {
     const vatWithPrice = actualPrice + (actualPrice*vat/100);
@@ -25,8 +30,8 @@ const RecivedVatDetails = vatAdder(takeAcualPrice , 10)
 const recivedDiscountDetails = discountMaker( RecivedVatDetails[0] , 30);
 
 // Display the result
-document.getElementById("actualPrice").innerHTML = takeAcualPrice;
+document.getElementById("actualPrice").innerHTML = `${takeAcualPrice} Tk`;
 document.getElementById("ProductVat").innerHTML = `${RecivedVatDetails[1]}%`;
-document.getElementById("ProductPriceWithVat").innerHTML = `${RecivedVatDetails[0]}`;
+document.getElementById("ProductPriceWithVat").innerHTML = `${RecivedVatDetails[0]} Tk`;
 document.getElementById("ProductDiscout").innerHTML = `${recivedDiscountDetails[1]}%`;
-document.getElementById("FinalProductPrice").innerHTML = `${recivedDiscountDetails[0]}`;
+document.getElementById("FinalProductPrice").innerHTML = `${recivedDiscountDetails[0]} Tk`;
